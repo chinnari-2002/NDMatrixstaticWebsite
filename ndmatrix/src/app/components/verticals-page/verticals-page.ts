@@ -10,8 +10,8 @@ import { ActivatedRoute, Router, RouterLink } from '@angular/router';
   styleUrls: ['./verticals-page.css']
 })
 export class VerticalsPage {
-  constructor(){
-   
+   constructor(private router: Router) {
+    this.currentRoute = this.router.url; // ✅ set current route
   }
    hoverCard: any = null;
 currentRoute: string = '';
@@ -20,6 +20,7 @@ currentRoute: string = '';
       title:"Aerospace/Mechanical",
       description:`nDMatrix provides advanced tools and learning resources for  students, educators, and professionals aiming for industry readiness.`,
       verticalImg:"images/aerospace.jpg",
+      route: "https://arc.ndmatrix.in",
     },
 //     {
 //     title:"Robotics/Mechatronics",
@@ -35,6 +36,7 @@ currentRoute: string = '';
     title:"Software Development Center",
     description:` We supports students and educators in building real-world applications we offer guided, project-based learning experiences.`,
  verticalImg:"images/softwareDev.jpg",
+  route: "https://sdc.ndmatrix.in", 
     }
   ]
 
@@ -45,15 +47,22 @@ currentRoute: string = '';
 onMouseLeave() {
   this.hoverCard = null;
 }
-//  // Check if this card's route matches current URL
-//   isActive(card: any): boolean {
-//     return card.route === this.currentRoute;
-//   }
-// onCardClick(card: any, event: MouseEvent) {
-//     if (card.route) {
-//       event.preventDefault(); 
-//       this.router.navigate([card.route]);
-//     }
-//   }
+ // Check if this card's route matches current URL
+  isActive(card: any): boolean {
+    return card.route === this.currentRoute;
+  }
+onCardClick(card: any, event: MouseEvent) {
+    event.preventDefault();
+
+    if (!card.route) return;
+
+    if (card.route.startsWith('http')) {
+      // ✅ External URL
+      window.open(card.route, '_blank');
+    } else {
+      // ✅ Internal Angular route
+      this.router.navigate([card.route]);
+    }
+  }
 
 }

@@ -3,16 +3,16 @@
  <div class="mainVerticals-container" >
         <div class="headingFor-verticals"><i class="fa-solid fa-diamond"></i><i class="fa-solid fa-diamond"></i><i class="fa-solid fa-diamond"></i><h2>Centers</h2><i class="fa-solid fa-diamond"></i><i class="fa-solid fa-diamond"></i><i class="fa-solid fa-diamond"></i></div>
 <div class="verticals-cards-Container">
-    <div class="vertical-card" *ngFor="let verticalCard of verticals"
+    <!-- <div class="vertical-card" *ngFor="let verticalCard of verticals"
       (mouseenter)="onMouseEnter(verticalCard)"
-     (mouseleave)="onMouseLeave()">
-      <!-- <div class="vertical-card" *ngFor="let verticalCard of verticals"
+     (mouseleave)="onMouseLeave()"> -->
+      <div class="vertical-card" *ngFor="let verticalCard of verticals"
      [routerLink]="verticalCard.route ? verticalCard.route : null"
      [class.active]="isActive(verticalCard)"
      [class.clickable]="verticalCard.route"
      (click)="onCardClick(verticalCard, $event)"
       (mouseenter)="onMouseEnter(verticalCard)"
-     (mouseleave)="onMouseLeave()"> -->
+     (mouseleave)="onMouseLeave()">
          <div class="verticalsImgTitleInfo">
         <div class="imageForCards">
             <img [src]="verticalCard.verticalImg" alt="cardImg1"/>
@@ -22,9 +22,9 @@
         <div class="verticalsInfo">
        <div class="verticalsName"><h3>{{verticalCard.title}}</h3></div>
         <div class="verticalsDiscription">{{verticalCard.description}} </div>
-         <!-- <div class="arrow" *ngIf="verticalCard.route && (hoverCard === verticalCard || isActive(verticalCard))" > -->
-    <!-- <i class="fa-solid fa-arrow-right"></i> -->
-  <!-- </div> -->
+         <div class="arrow" *ngIf="verticalCard.route && (hoverCard === verticalCard || isActive(verticalCard))" >
+    <i class="fa-solid fa-arrow-right"></i>
+  </div>
 </div>
 
   </div>
