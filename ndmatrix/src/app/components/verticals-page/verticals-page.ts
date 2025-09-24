@@ -17,10 +17,12 @@ export class VerticalsPage {
 currentRoute: string = '';
   verticals=[
     {
-      title:"Aerospace/Mechanical",
+
+      title:"Aerospaince/Mechanical",
       description:`nDMatrix provides advanced tools and learning resources for  students, educators, and professionals aiming for industry readiness.`,
       verticalImg:"images/aerospace.jpg",
       route: "https://arc.ndmatrix.in",
+
     },
 //     {
 //     title:"Robotics/Mechatronics",
@@ -33,10 +35,11 @@ currentRoute: string = '';
 //  verticalImg:"images/mlalogorithm.jpg",
 //     },
      {
-    title:"Software Development Center",
-    description:` We supports students and educators in building real-world applications we offer guided, project-based learning experiences.`,
+    title:"Software Development Centre",
+    description:`We specialize in developing innovative EdTech tools and robust core software development products.`,
  verticalImg:"images/softwareDev.jpg",
   route: "https://sdc.ndmatrix.in", 
+
     }
   ]
 

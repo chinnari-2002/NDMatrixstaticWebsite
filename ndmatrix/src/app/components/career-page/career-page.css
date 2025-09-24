@@ -73,6 +73,7 @@ margin: 3rem 0;
  .headeingForCareer{
     text-align: center;
     color: #444491;
+    font-size: 24px;
  }
  
 /* 
@@ -299,7 +300,9 @@ border-color: rgb(130, 130, 245);
     .search-box input {
   width: 60%;
     }
-  
+  .headeingForCareer {
+    font-size: 20px;
+  }
 }
 @media(max-width:400px){
     .search-box input {

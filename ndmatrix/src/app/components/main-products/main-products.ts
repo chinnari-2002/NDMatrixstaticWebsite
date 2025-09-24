@@ -34,23 +34,23 @@ export class MainProducts implements AfterViewInit {
 productCards = [
   {
     title: "Test Generator",
-    discription: `A backend tool for automated creation of customized tests by selecting question type, topic, difficulty, and more.`,
+    discription: `A backend tool for automated creation of customized tests by selecting question type, topic, difficulty and more.`,
     productsIcon: "fa-solid fa-file-circle-check"
   },
   {
     title: "Educational Management platform",
-    discription: `A unified platform offering end-to-end solutions for learning, student administration, and institutional management — built for educators, learners, and administrators.`,
+    discription: `A unified platform offering end-to-end solutions for learning, student administration and institutional management — built for educators, learners and administrators.`,
     productsIcon: "fa-solid fa-school"
   },
  
   {
     title: "Integrated Learning Platform",
-    discription: `A unified platform combining OTS, ORVL, PQB, SM, LMS, and SMS for seamless use by institutes and learners.`,
+    discription: `A unified platform combining OTS, ORVL, PQB, SM, LMS and SMS for seamless use by institutes and learners.`,
     productsIcon: "fa-solid fa-layer-group"
   },
   {
     title: "Cloud Services & Infrastructure",
-    discription: `Tools for deploying, scaling, and maintaining cloud apps with containers, CI/CD, and monitoring.`,
+    discription: `Tools for deploying, scaling and maintaining cloud apps with containers, CI/CD and monitoring.`,
     productsIcon: "fa-solid fa-cloud-arrow-up"
   }
 ];

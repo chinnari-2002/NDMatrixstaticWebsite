@@ -1,6 +1,6 @@
 .mainVerticals-container {
   position: relative;
-  margin: 3rem 0;
+  /* margin: 3rem 0; */
 }
 #verticals {
   scroll-margin-top: 150px; 
@@ -47,8 +47,8 @@
   z-index: 2;
 }
 .imageForCards {
-  width: 100%;
-  height: auto;
+  width: 300px;
+  height: 200px;
 }
 .imageForCards img {
   width: 100%;
@@ -75,6 +75,7 @@
   height: 300px;
   transition: transform 0.3s ease;
   cursor: pointer;
+  margin: 1rem;
 }
 .verticalsImgTitleInfo,
 .verticalsInfo {
@@ -124,12 +125,18 @@
   text-align: center;
 }
 .verticalsName {
-  font-size: 1.1rem;
+  /* font-size: 1.1rem; */
   /* font-weight: 500; */
   text-transform: capitalize;
   text-align: center;
   color: rgb(31, 20, 20);
   padding: 1rem;
+}
+.verticalsName h3{
+  font-size: 20px;
+}
+.verticalsName h3{
+  font-size: 20px;
 }
 .headingFor-verticals {
   text-align: center;
@@ -150,8 +157,8 @@
 .verticalsDiscription {
   width: 100%;
   padding: 0 1rem;
-  white-space: normal;
-  overflow-wrap: break-word;
+text-align: justify;
+hyphens: auto;
   color: rgb(112, 111, 111);
   font-size: 1rem;
 }
@@ -160,7 +167,13 @@
     gap: 1rem;
     margin: 1rem;
   }
-  .verticalsDiscription {
-    font-size: 13px;
-  }
+  
+}
+@media (max-width: 600px) {
+.headingFor-verticals h2 {
+  font-size: 20px;
+}
+.verticalsName h3{
+  font-size: 18px;
+}
 }
