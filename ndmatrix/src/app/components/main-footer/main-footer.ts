@@ -13,20 +13,20 @@ export class MainFooter {
   constructor(
     private router: Router,
     @Inject(PLATFORM_ID) private platformId: Object
-  ) {}
+  ) { }
 
- navigateHome(event?: Event) {
-  if (event) {
-    event.preventDefault();
-  }
-
-  this.router.navigate(['/'], { fragment: undefined }).then(() => {
-    if (isPlatformBrowser(this.platformId)) {
-      setTimeout(() => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      }, 0);
+  navigateHome(event?: Event) {
+    if (event) {
+      event.preventDefault();
     }
-  });
-}
+
+    this.router.navigate(['/'], { fragment: undefined }).then(() => {
+      if (isPlatformBrowser(this.platformId)) {
+        setTimeout(() => {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }, 0);
+      }
+    });
+  }
 
 }
